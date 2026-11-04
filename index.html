@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>unfeed Privacy Policy</title>
+<link rel="icon" type="image/png" href="assets/icon-128.png">
+<link rel="apple-touch-icon" href="assets/icon-128.png">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Silkscreen&display=swap">
 <style>
 /* layout: one terminal-style reading column; a pixel wordmark header, then numbered policy sections */
@@ -23,8 +25,7 @@ body{margin:0;background:var(--bg);color:var(--text);font:400 15px/1.7 var(--mon
 header{padding-block:56px 32px;border-bottom:1px dashed var(--line-2);display:grid;gap:14px}
 .prompt{color:var(--dim);font-size:13px}.prompt b{color:var(--accent);font-weight:500}
 .brand{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
-.blip{width:64px;height:auto;filter:drop-shadow(0 0 12px rgba(255,79,63,.45));animation:hop 2.8s var(--ease) infinite}
-.blip rect{fill:var(--accent)}.blip .e{fill:var(--bg)}
+.logo{width:64px;height:66px;filter:drop-shadow(0 0 12px rgba(255,79,63,.4));animation:hop 2.8s var(--ease) infinite}
 h1{font:400 clamp(30px,7vw,46px)/1 var(--pixel);margin:0;letter-spacing:.01em;text-wrap:balance}
 h1 span{color:var(--accent)}
 .meta{color:var(--dim);font-size:13px;display:flex;gap:8px 18px;flex-wrap:wrap}
@@ -50,7 +51,7 @@ a{color:var(--accent-2);text-underline-offset:3px}
 a:focus-visible{outline:1px dashed var(--accent);outline-offset:3px}
 footer{margin-top:36px;color:var(--faint);font-size:12.5px}
 @keyframes hop{0%,70%,100%{transform:translateY(0)}78%{transform:translateY(-6px)}86%{transform:translateY(0)}}
-@media (prefers-reduced-motion:reduce){.blip{animation:none}}
+@media (prefers-reduced-motion:reduce){.logo{animation:none}}
 </style>
 </head>
 <body>
@@ -59,14 +60,7 @@ footer{margin-top:36px;color:var(--faint);font-size:12.5px}
 <header>
   <div class="prompt">$ <b>unfeed</b> --privacy</div>
   <div class="brand">
-    <svg class="blip" viewBox="0 0 12 8" shape-rendering="crispEdges" aria-hidden="true">
-      <rect x="3" y="0" width="1" height="1"/><rect x="8" y="0" width="1" height="1"/>
-      <rect x="2" y="1" width="8" height="1"/>
-      <rect x="1" y="2" width="10" height="3"/><rect x="0" y="3" width="12" height="1"/>
-      <rect x="2" y="5" width="8" height="1"/>
-      <rect x="2" y="6" width="1" height="2"/><rect x="4" y="6" width="1" height="2"/><rect x="7" y="6" width="1" height="2"/><rect x="9" y="6" width="1" height="2"/>
-      <rect class="e" x="3" y="2" width="1" height="2"/><rect class="e" x="8" y="2" width="1" height="2"/>
-    </svg>
+    <img class="logo" src="assets/owl.png" width="64" height="66" alt="">
     <h1>un<span>feed</span> privacy</h1>
   </div>
   <div class="meta"><span>effective 4 November 2026</span><span>applies to the unfeed Chrome extension</span></div>
