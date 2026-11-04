@@ -23,7 +23,6 @@ body{margin:0;background:var(--bg);color:var(--text);font:400 15px/1.7 var(--mon
   background-image:radial-gradient(ellipse at 85% -10%,rgba(255,79,63,.16),transparent 55%)}
 .wrap{max-width:720px;margin:0 auto}
 header{padding-block:56px 32px;border-bottom:1px dashed var(--line-2);display:grid;gap:14px}
-.prompt{color:var(--dim);font-size:13px}.prompt b{color:var(--accent);font-weight:500}
 .brand{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
 .logo{width:64px;height:66px;filter:drop-shadow(0 0 12px rgba(255,79,63,.4));animation:hop 2.8s var(--ease) infinite}
 h1{font:400 clamp(30px,7vw,46px)/1 var(--pixel);margin:0;letter-spacing:.01em;text-wrap:balance}
@@ -47,9 +46,9 @@ th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line);vert
 th{color:var(--dim);font-weight:500;font-size:12px;letter-spacing:.06em;text-transform:uppercase;background:var(--panel)}
 tr:last-child td{border-bottom:0}
 td:first-child{color:var(--text);white-space:nowrap}
+td code{white-space:nowrap;overflow-wrap:normal}
 a{color:var(--accent-2);text-underline-offset:3px}
 a:focus-visible{outline:1px dashed var(--accent);outline-offset:3px}
-footer{margin-top:36px;color:var(--faint);font-size:12.5px}
 @keyframes hop{0%,70%,100%{transform:translateY(0)}78%{transform:translateY(-6px)}86%{transform:translateY(0)}}
 @media (prefers-reduced-motion:reduce){.logo{animation:none}}
 </style>
@@ -58,7 +57,6 @@ footer{margin-top:36px;color:var(--faint);font-size:12.5px}
 
 <div class="wrap">
 <header>
-  <div class="prompt">$ <b>unfeed</b> --privacy</div>
   <div class="brand">
     <img class="logo" src="assets/owl.png" width="64" height="66" alt="">
     <h1>un<span>feed</span> privacy</h1>
@@ -72,20 +70,8 @@ footer{margin-top:36px;color:var(--faint);font-size:12.5px}
 </div>
 
 <section>
-  <h2>What unfeed does</h2>
-  <p>unfeed is a distraction-free YouTube extension that mutes algorithmic attention traps so you watch what you came for. It runs only on <code>https://www.youtube.com/*</code>, and all of its work happens inside your browser.</p>
-  <p>Depending on the preset (lite, focus or monk) and the 15 individual rules you turn on, unfeed can:</p>
-  <ul>
-    <li>block Shorts and redirect <code>/shorts/</code> links to the normal video player;</li>
-    <li>replace the home-feed recommendations with a focus terminal, or redirect the home page to your subscriptions;</li>
-    <li>hide Up Next and related videos, end screens, info cards and fullscreen suggestion grids;</li>
-    <li>keep autoplay switched off on watch pages;</li>
-    <li>remove injected shelves from search results;</li>
-    <li>hide comments, live chat, merch and ticket shelves, explore and trending sections, and the notification badge;</li>
-    <li>show thumbnails in grayscale;</li>
-    <li>if you sign in, turn on ad-free mode, which removes video, promoted, banner and in-feed ads before they render.</li>
-  </ul>
-  <p>To do this, unfeed reads and changes the YouTube page open in your tab, and checks the page address to spot <code>/shorts/</code> links. This happens locally on your device. unfeed does not record or send the pages, videos or searches you view.</p>
+  <h2>Scope</h2>
+  <p>This policy covers the unfeed Chrome extension. unfeed runs only on <code>https://www.youtube.com/*</code>. To hide parts of YouTube and redirect <code>/shorts/</code> links, it reads and changes the YouTube page in your tab and checks the page address. This happens on your device. unfeed does not record or send the pages, videos or searches you view.</p>
 </section>
 
 <section>
@@ -145,7 +131,6 @@ footer{margin-top:36px;color:var(--faint);font-size:12.5px}
   <p>Questions about privacy can be sent to the developer through the contact email listed on unfeed's Chrome Web Store page.</p>
 </section>
 
-<footer>unfeed // the algorithm, muted</footer>
 </div>
 </body>
 </html>
