@@ -69,17 +69,29 @@ footer{margin-top:36px;color:var(--faint);font-size:12.5px}
     </svg>
     <h1>un<span>feed</span> privacy</h1>
   </div>
-  <div class="meta"><span>effective 19 October 2026</span><span>applies to the unfeed Chrome extension</span></div>
+  <div class="meta"><span>effective 4 November 2026</span><span>applies to the unfeed Chrome extension</span></div>
 </header>
 
 <div class="tldr">
   <h2>short version</h2>
-  <p>unfeed has no servers. It does not collect, sell or share your data, and it has no analytics or tracking. Your settings, stats and (if you sign in) your Google name, email and profile picture are stored in your own browser and nowhere else.</p>
+  <p>unfeed is 100% local. It has no backend servers, no tracking, no telemetry and no analytics, and it does not collect, sell or share your data. Your rule settings, blocked stats and (if you sign in) your Google name, email and profile picture are stored in your own browser and nowhere else.</p>
 </div>
 
 <section>
   <h2>What unfeed does</h2>
-  <p>unfeed is a browser extension that hides distracting parts of YouTube, such as Shorts, the home-feed recommendations, Up Next, end screens and ads. It runs only on <code>https://www.youtube.com/*</code>. All of its work happens inside your browser.</p>
+  <p>unfeed is a distraction-free YouTube extension that mutes algorithmic attention traps so you watch what you came for. It runs only on <code>https://www.youtube.com/*</code>, and all of its work happens inside your browser.</p>
+  <p>Depending on the preset (lite, focus or monk) and the 15 individual rules you turn on, unfeed can:</p>
+  <ul>
+    <li>block Shorts and redirect <code>/shorts/</code> links to the normal video player;</li>
+    <li>replace the home-feed recommendations with a focus terminal, or redirect the home page to your subscriptions;</li>
+    <li>hide Up Next and related videos, end screens, info cards and fullscreen suggestion grids;</li>
+    <li>keep autoplay switched off on watch pages;</li>
+    <li>remove injected shelves from search results;</li>
+    <li>hide comments, live chat, merch and ticket shelves, explore and trending sections, and the notification badge;</li>
+    <li>show thumbnails in grayscale;</li>
+    <li>if you sign in, turn on ad-free mode, which removes video, promoted, banner and in-feed ads before they render.</li>
+  </ul>
+  <p>To do this, unfeed reads and changes the YouTube page open in your tab, and checks the page address to spot <code>/shorts/</code> links. This happens locally on your device. unfeed does not record or send the pages, videos or searches you view.</p>
 </section>
 
 <section>
@@ -88,9 +100,9 @@ footer{margin-top:36px;color:var(--faint);font-size:12.5px}
   <div class="tbl"><table>
     <thead><tr><th>Data</th><th>Why</th><th>Where</th></tr></thead>
     <tbody>
-      <tr><td>Rule settings</td><td>Remembers which rules and preset you turned on, and any pause timer.</td><td><code>chrome.storage.sync</code></td></tr>
-      <tr><td>Usage stats</td><td>Counts things like Shorts blocked and ads skipped per day, shown only to you in the popup.</td><td><code>chrome.storage.local</code></td></tr>
-      <tr><td>Google profile</td><td>Only if you sign in: your Google account ID, name, first name, email address and profile picture link. Used to show who is signed in and to unlock signed-in features.</td><td><code>chrome.storage.local</code></td></tr>
+      <tr><td>Rule settings</td><td>Remembers which rules and preset you turned on, and any pause timer (5m, 15m or 1h).</td><td><code>chrome.storage.sync</code></td></tr>
+      <tr><td>Usage stats</td><td>Daily counts of Shorts, recommendations and ads blocked over the last 7 days, and an estimate of minutes reclaimed. Shown only to you in the popup.</td><td><code>chrome.storage.local</code></td></tr>
+      <tr><td>Google profile</td><td>Only if you sign in: your Google account ID, name, first name, email address and profile picture link. Used to show who is signed in, to put your name on your focus terminal and stats, and to unlock ad-free mode.</td><td><code>chrome.storage.local</code></td></tr>
       <tr><td>Sign-in status</td><td>Temporary state while sign-in is in progress. Cleared when the browser closes.</td><td><code>chrome.storage.session</code></td></tr>
     </tbody>
   </table></div>
@@ -99,7 +111,7 @@ footer{margin-top:36px;color:var(--faint);font-size:12.5px}
 
 <section>
   <h2>Google sign-in</h2>
-  <p>Signing in is optional. When you choose "Sign in with Google", unfeed opens Google's own sign-in page using Chrome's <code>identity</code> API and asks only for the <code>openid</code>, <code>email</code> and <code>profile</code> scopes. Google returns a signed token, which unfeed checks and then reads for the profile fields listed above. The token itself is not kept.</p>
+  <p>Signing in is optional and is only needed for ad-free mode and the personalised focus terminal. When you choose "Sign in with Google", unfeed opens Google's own sign-in page using Chrome's <code>identity</code> API and asks only for the <code>openid</code>, <code>email</code> and <code>profile</code> scopes. Google returns a signed token, which unfeed checks and then reads for the profile fields listed above. The token itself is not kept.</p>
   <p>unfeed never sees your password, never gets access to your Gmail, Drive, YouTube account or any other Google data, and never sends your profile anywhere. Your profile picture is loaded from Google's image servers when the popup shows it.</p>
   <p>unfeed's use of information received from Google APIs follows the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
 </section>
